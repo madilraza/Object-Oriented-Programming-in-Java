@@ -1,0 +1,23 @@
+/*Runtime Polymorphism (or Dynamic polymorphism)
+It is also known as Dynamic Method Dispatch.
+ Dynamic polymorphism is a process in which a call
+ to an overridden method is resolved at runtime, 
+ thats why it is called runtime polymorphism. 
+ I have already discussed method overriding in detail in a separate tutorial, refer it: Method Overriding in Java.
+ */
+ 
+ class ABC{
+   public void myMethod(){
+	System.out.println("Overridden Method");
+   }
+}
+public class XYZ extends ABC{
+
+   public void myMethod(){
+	System.out.println("Overriding Method");
+   }
+   public static void main(String args[]){
+	ABC obj = new XYZ();
+	obj.myMethod();
+   }
+}

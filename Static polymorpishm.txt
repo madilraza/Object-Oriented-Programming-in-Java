@@ -1,0 +1,28 @@
+/*Static Polymorphism
+Method overloading is one of the way java 
+supports static polymorphism. Here we have two 
+definitions of the same method add() which add method
+ would be called is determined by the parameter list at 
+ the compile time. That is the reason this is also known as compile time polymorphism.
+*/
+
+class SimpleCalculator
+{
+    int add(int a, int b)
+    {
+         return a+b;
+    }
+    int  add(int a, int b, int c)  
+    {
+         return a+b+c;
+    }
+}
+public class Demo
+{
+   public static void main(String args[])
+   {
+	   SimpleCalculator obj = new SimpleCalculator();
+       System.out.println(obj.add(10, 20));
+       System.out.println(obj.add(10, 20, 30));
+   }
+}
